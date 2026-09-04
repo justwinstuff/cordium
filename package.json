@@ -1,0 +1,29 @@
+{
+  "name": "cordium",
+  "displayName": "Cordium",
+  "description": "Bring Discord into VS Code! Chat with your friends without having to constantly switch back and forth between VS Code and Discord.",
+  "version": "0.0.1",
+  "type": "module",
+  "publisher": "justwinstuff",
+  "engines": {
+    "vscode": "^1.136.0"
+  },
+  "main": "./src/main.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cordium.signIn",
+        "title": "Cordium: Sign In With Token"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@types/node": "24.x",
+    "@types/vscode": "^1.136.0",
+    "eslint": "^10.5.0",
+    "globals": "^17.12.0"
+  }
+}
