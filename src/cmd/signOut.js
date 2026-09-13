@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 
 export function signOutCmd(context) {
-  const signOut = vscode.commands.registerCommand(
+  const signOutCmd = vscode.commands.registerCommand(
     "cordium.signOut",
     async () => {
       try {
@@ -13,5 +13,5 @@ export function signOutCmd(context) {
     },
   );
 
-  context.subscriptions.push(signOut);
+  context.subscriptions.push(signOutCmd);
 }
