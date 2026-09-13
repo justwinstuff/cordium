@@ -10,6 +10,10 @@ export async function signIn(token) {
   return client;
 }
 
+export async function signOut() {
+  await client.logout();
+}
+
 export function getClient() {
   return client;
 }

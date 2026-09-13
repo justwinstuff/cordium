@@ -1,10 +1,13 @@
 import * as vscode from "vscode";
+import { signOut } from "../auth/auth.js";
 
 export function signOutCmd(context) {
   const signOutCmd = vscode.commands.registerCommand(
     "cordium.signOut",
     async () => {
       try {
+        await signOut();
+
         await context.secrets.delete("discordToken");
         await vscode.window.showInformationMessage("Cordium: Signed Out");
       } catch (err) {
