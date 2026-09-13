@@ -1,5 +1,5 @@
-import { signInCmd } from "./auth/signInCmd.js";
-import { signOutCmd } from "./auth/signOutCmd.js";
+import { signInCmd } from "./cmd/signIn.js";
+import { signOutCmd } from "./cmd/signOut.js";
 
 function activate(context) {
   signInCmd(context);
